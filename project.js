@@ -1,8 +1,8 @@
 var sketchProc = function(processing) {
 	
     
-
-    processing.rect (60,60,20,20);
+ 
+    
 
     // this code is executed once when the program is started
     processing.setup = function() {
@@ -14,8 +14,11 @@ var sketchProc = function(processing) {
  
     // override draw function, by default it will be called 60 times per second
     processing.draw = function() {
-
+  processing.rect(processing.mouseX,processing.mouseY,60,60);
+  processing.rect (550,400,60,60);
+    
     };
+   
 }
 
 
