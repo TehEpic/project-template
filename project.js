@@ -14,8 +14,17 @@ var sketchProc = function(processing) {
  
     // override draw function, by default it will be called 60 times per second
     processing.draw = function() {
-  processing.rect(processing.mouseX,processing.mouseY,60,60);
-  processing.rect (550,400,60,60);
+  
+
+processing.background(255,255,255);
+processing.fill(30,30,30);
+processing.textSize(32);
+processing.text("Forever Alone Pong",300,300);
+processing.fill(50,50,50);  
+processing.rect(processing.mouseX,processing.mouseY,30,90);
+processing.rect(250,300,10,10);
+
+ 
     
     };
    
