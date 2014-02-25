@@ -1,7 +1,10 @@
 var sketchProc = function(processing) {
 	
     
- 
+ 	var x = 20;
+        var y = 50;
+	
+	var speed = 7;
     
 
     // this code is executed once when the program is started
@@ -15,16 +18,29 @@ var sketchProc = function(processing) {
     // override draw function, by default it will be called 60 times per second
     processing.draw = function() {
   
+  
 
-processing.background(255,255,255);
-processing.fill(30,30,30);
-processing.textSize(32);
-processing.text("Forever Alone Pong",300,300);
-processing.fill(50,50,50);  
-processing.rect(processing.mouseX,processing.mouseY,30,90);
-processing.rect(250,300,10,10);
+   
+	
+	processing.background(255,255,255);
+	processing.fill(30,30,30);
 
+	processing.textSize(32);
+
+	processing.text("Forever Alone Pong",300,300);
+
+	processing.fill(50,50,50);  
+	//Paddle
+	processing.rect(processing.mouseX,processing.mouseY,30,90);
+	// ball 
+     
+
+	
+
+
+	processing.rect(x,y,10,10);
  
+	x = x + speed;  
     
     };
    
