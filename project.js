@@ -31,17 +31,29 @@ var sketchProc = function(processing) {
 
 	processing.fill(50,50,50);  
 	//Paddle
+	
 	processing.rect(processing.mouseX,processing.mouseY,30,90);
-	// ball 
-     
-
 	
 
 
+
+	// ball
+
+ 
+      if (x === processing.mouseX) {
+        speed = -7;
+    }
+	if (y === processing.mouseY) {
+        speed = -7;
+    }
 	processing.rect(x,y,10,10);
  
 	x = x + speed;  
-    
+     if (x > 800) {
+        speed = -7;
+    }
+
+
     };
    
 }
