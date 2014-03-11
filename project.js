@@ -2,9 +2,15 @@ var sketchProc = function(processing) {
 	
     
  	var x = 20;
-        var y = 50;
+        var y = 150;
 	
 	var speed = 7;
+	//Paddle
+	var paddle = {
+		height: 90,
+		width: 30
+
+	};
     
 
     // this code is executed once when the program is started
@@ -30,22 +36,19 @@ var sketchProc = function(processing) {
 	processing.text("Forever Alone Pong",300,300);
 
 	processing.fill(50,50,50);  
-	//Paddle
-	
-	processing.rect(processing.mouseX,processing.mouseY,30,90);
-	
 
-
+	
+	
+	
+	
+	
 
 	// ball
+	if (x < processing.mouseX && y > processing.mouseY - (paddle.height / 2) && y < processing.mouseY + (paddle.height / 2)) {
+    	    speed = 7;
+    	}
 
- 
-      if (x === processing.mouseX) {
-        speed = -7;
-    }
-	if (y === processing.mouseY) {
-        speed = -7;
-    }
+
 	processing.rect(x,y,10,10);
  
 	x = x + speed;  
@@ -57,6 +60,8 @@ var sketchProc = function(processing) {
     };
    
 }
+	
+     
 
 
 // boilerplate code --you probably want to ignore this
